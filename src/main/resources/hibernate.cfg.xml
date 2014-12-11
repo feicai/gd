@@ -1,0 +1,29 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/gd</property>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">sxq</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="current_session_context_class">thread</property>
+        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+		<property name="format_sql">false</property>
+		<property name="javax.persistence.validation.mode">none</property>  
+		
+		<mapping class="sxq.gd.model.User"/>
+		<mapping class="sxq.gd.model.Menu"/>
+		<mapping class="sxq.gd.model.Role"/>
+		<mapping class="sxq.gd.model.UserRole"/>
+		<mapping class="sxq.gd.model.Acl"/>
+		<mapping class="sxq.gd.model.Subject"/>
+		<mapping class="sxq.gd.model.Approve"/>
+		<mapping class="sxq.gd.model.MyFile"/>
+		<mapping class="sxq.gd.model.Design"/>
+	</session-factory>
+</hibernate-configuration>
